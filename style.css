@@ -1,0 +1,130 @@
+body {
+    background-color: #e0fffb;
+}
+
+.font1 {
+    font-size: .875rem;
+}
+
+.font2 {
+    font-size: 1.875rem;
+    font-style: italic;
+}
+
+.bckgrnd-color1 {
+    background-color: hsl(216, 100%, 92%);
+}
+
+/* resume */
+.center-it {
+    text-align: center;
+}
+
+.job-item {
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1875rem;
+}
+
+.contact {
+    background-color: hsl(216, 100%, 92%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-items {
+    padding: 1rem;
+    text-align: left;
+}
+
+h1 {
+    background-color: hsl(216, 100%, 92%);
+    text-align: center;
+}
+
+/* portfolio */
+.pad1 {
+    padding: 10px;
+}
+
+.pad2 {
+    padding: 15px;
+}
+
+.marg1 {
+    margin: 20px;
+}
+
+/* contact */
+label {
+    display: block;
+}
+
+input {
+    display: block;
+    margin-bottom: 15px;
+}
+
+button {
+    display: block;
+}
+
+/* cover letter */
+img {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 50%;
+}
+
+h3 {
+    background-color: hsl(216, 100%, 92%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.date {
+    font-size: .875rem;
+    font-style: italic;
+}
+
+/* index */
+.link-item {
+    text-align: center;
+    background-color: springgreen;
+    border-style: solid;
+    border-width: 3px;
+    width: 50%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    background-color: hsl(216, 100%, 92%);
+    width: 100%;
+    height: 100%;
+    padding: 1vh 1vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer {
+    background-color: hsl(216, 100%, 92%);
+    width: 100%;
+    height: 100%;
+    padding: 1vh 1vw;
+    margin-right: auto;
+    margin-left: auto;
+    border-top: 1px solid black;
+}
