@@ -30,8 +30,23 @@
                 var messageOutput = document.getElementById('messageOutput');
                 messageOutput.innerHTML = message.value;
 
-                var firstNameContainer = document.getElementById('firstNameContainer');
-                firstNameContainer.style.display = 'block';
+                var radios = document.getElementsByName('contact_reason');
+                for(var i = 0; i < radios.length; i++) {
+                    if(radios[i].checked) {
+                        var selectedRadio = radios[i].value;
+                        
+                        break;
+                    }
+                }
+            }
+
+            var clearForm = function() {
+                var items = document.getElementsByClassName('input-item');
+                console.log(items);
+
+                for(var i = 0; i<items.length; i++) {
+                    items[i].value = '';
+                }
             }
         </script>
 
@@ -52,19 +67,19 @@
                 
                         <div class="form-group">
                             <label>First Name</label>
-                            <input class="form-control" type="text" name="fname" id="fname">
+                            <input class="form-control input-item" type="text" name="fname" id="fname">
                         </div>
                         <div class="form-group">
                             <label>Last Name</label>
-                            <input class="form-control" type="text" name="lname" id="lname">
+                            <input class="form-control input-item" type="text" name="lname" id="lname">
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input class="form-control" type="email" name="email" id="email">
+                            <input class="form-control input-item" type="email" name="email" id="email">
                         </div>
                         <div class="form-group">
                             <label>Age</label>
-                            <input class="form-control" type="number" name="age" id="age">
+                            <input class="form-control input-item" type="number" name="age" id="age">
                         </div>
                         <div class="form-group">
                             <label>Image</label>
@@ -82,7 +97,7 @@
                         
                         <div class="form-group">
                             <label for="">Message</label>
-                            <textarea class="form-control" name="" id="message" cols=50 rows="8"></textarea>
+                            <textarea class="form-control input-item" name="" id="message" cols="50" rows="8"></textarea>
                         </div>
         
                         <hr>
@@ -94,13 +109,19 @@
                         
         
                         <!-- <input type="submit" value="Submit Me!"> -->
-                        <button class="btn btn-primary" type="button" onclick="submitForm()">Submit Form</button>
+                        <button class="btn btn-primary" type="button" onclick="submitForm()">
+                            Submit Form
+                        </button>
+
+                        <button class="btn btn-danger" type="button" onclick="clearForm()">
+                            Clear
+                        </button>
                     </form>
                 </div>
                 <div class="col-sm-6">
                     <h3>Output</h3>
-                    <p style="display: none;" id="firstNameContainer"><strong>First Name: </strong><span id="firstNameOutput"></span></p>
-                    <p style="display: none;" id="lastNameContainer"><strong>Last Name: </strong><span id="lastNameOutput"></span></p>
+                    <p><strong>First Name: </strong><span id="firstNameOutput"></span></p>
+                    <p><strong>Last Name: </strong><span id="lastNameOutput"></span></p>
                     <p><strong>Email: </strong><span id="emailOutput"></span></p>
                     <p><strong>Age: </strong><span id="ageOutput"></span></p>
                     <p><strong>Message: </strong><span id="messageOutput"></span></p>
